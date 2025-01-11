@@ -10,14 +10,14 @@ const Footer: FC = () => {
   return (
     <footer className="w-full bg-gradient-to-b from-brand-800 to-brand-500 text-white mt-20 rounded-t-[50px]">
       <Container>
-        <Flex align="start" justify="justify-between" className="py-16">
-          <Flex className="bg-white p-3 rounded-lg h-fit">
+        <Flex direction="col" align="items-center md:items-start" justify="justify-start md:justify-between" gap="gap-10 md:gap-4" className="py-16">
+          <Flex className="bg-white p-3 rounded-lg h-fit w-fit">
             <div className="relative w-14 h-12">
               <Image src={"/img/rakata-logo.png"} alt="logo" fill />
             </div>
             <h2 className="uppercase text-brand-600 font-serif font-bold text-xl">RAKATA HEAT</h2>
           </Flex>
-          <Flex direction="col" align="start" className="max-w-sm">
+          <Flex direction="col" directionMd="col" align="items-center md:items-start" className="max-w-sm">
             <p className="font-medium text-center mb-2">Company</p>
             {links.map((link, i) => (
               <Link key={i} href={link.url} className="text-sm">
@@ -25,7 +25,7 @@ const Footer: FC = () => {
               </Link>
             ))}
           </Flex>
-          <Flex direction="col" align="start" className="max-w-sm">
+          <Flex direction="col" directionMd="col" align="start" className="max-w-sm">
             <p className="font-medium text-center mb-2">Get In Touch</p>
             <Flex align="start">
               <FaMapMarkerAlt className="flex-shrink-0" size={20} />
