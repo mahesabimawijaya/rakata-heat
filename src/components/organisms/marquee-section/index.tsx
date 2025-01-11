@@ -10,12 +10,12 @@ const MarqueeSection: FC = () => {
   return (
     <section className="py-20">
       <Container className="w-full relative overflow-hidden">
-        <Flex direction="col" gap="gap-7">
-          <Flex direction="col" gap="gap-3">
+        <Flex direction="col" directionMd="col" gap="gap-7">
+          <Flex direction="col" directionMd="col" gap="gap-3">
             <Flex justify="justify-center">
               <SectionTitle>Our Clients</SectionTitle>
             </Flex>
-            <p className="capitalize font-medium">Dipercaya oleh para professional di industri nasional</p>
+            <p className="capitalize font-medium text-center">Dipercaya oleh para professional di industri nasional</p>
           </Flex>
           <Marquee gradient={true}>
             {Array.from({ length: totalImages }).map((_, i) => (

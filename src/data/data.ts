@@ -12,8 +12,25 @@ export const links = [
     url: "/projects",
   },
   {
+    label: "Teams",
+    url: "/teams",
+  },
+  {
     label: "Contact us",
     url: "/contact-us",
+  },
+];
+
+export const visionMission = [
+  {
+    title: "Visi",
+    description:
+      "Dengan pengalaman keahlian teknis hampir 25 tahun dan pengalaman pribadi di bidang PWHT/Heat Treatment yang telah melayani pabrik minyak dan gas, pembangkit listrik, pabrik kimia,pabrik pulp dan kertas, turbin, industri makanan, alat berat, industri plastik, besi dan baja dan pabrik bahan logam. Kami memantapkan hati untuk memulai bisnis jasa PWHT / Heat Treatment dengan sistem kelistrikan menggunakan elemen pemanas dan sistem pembakar gas. Pekerjaan Service PWHT / Heat Treatment, Preheating, Dry Out, Annealing, Tempering, dan lain-lain yang berhubungan dengan sistem pemanas. PT. RAKATA HEAT siap bersaing dengan mengacu pada standar kualitas internasional. Dengan visi masa depan sebagai perusahaan yang siapdibentuk, menghadirkan kualitas kerja berkualitas tinggi bidang khusus PWHT/HeatTreatment di Indonesia",
+  },
+  {
+    title: "Misi",
+    description:
+      "Konsiten dengan visi yang ada, misi perusahaan menetapkan target lima tahun yang dirancang untuk target Pertumbuhan yang kuat dan keuntungan tinggi melalui pertumbuhan konsumen internasional baru, diversifikasi produk berbasis heat treatment, peningkatan kualitas sumber daya manusia dan optimalisasi biaya, menurunkan resiko pencemaran alam dan tidak menimbulkan kecelakaan kerja bagi pekerja dan lingkungan",
   },
 ];
 
@@ -123,3 +140,38 @@ export const services = [
       "Piping adalah merancang, merakit, dan memastikan sistem perpipaan terpasang dengan aman dan efektif. Piping adalah sistem pemipaan yang menghubungkan perlatan dan komponen di dalam fasilitas pengolahan. Fluida yang diangkut dalam pipa bisa berupa gas, air, atau vapor.",
   },
 ];
+
+export const projects = [
+  {
+    year: "2017 - 2024",
+    client: "PT. NIPPON SHOKUBAI INDONESIA",
+    description: "Install and remove scaffolding",
+    location: "KAWASAN INDUSTRI PANCAPURI, GUNUNG SUGIH CIWANDAN KOTA CILEGON",
+  },
+  {
+    year: "2017 - 2024",
+    client: "PT. NIPPON SHOKUBAI INDONESIA",
+    description: "REMOVE & INSTALL INSULATION WORK",
+    location: "KAWASAN INDUSTRI PANCAPURI, GUNUNG SUGIH CIWANDAN KOTA CILEGON",
+  },
+  {
+    year: "2017 - 2024",
+    client: "PT. NIPPON SHOKUBAI INDONESIA",
+    description: "REPLACEMENT FIRE BRICK",
+    location: "KAWASAN INDUSTRI PANCAPURI, GUNUNG SUGIH CIWANDAN KOTA CILEGON",
+  },
+  {
+    year: "2017 - 2024",
+    client: "PT. NIPPON SHOKUBAI INDONESIA",
+    description: "REPAINTING WORK",
+    location: "KAWASAN INDUSTRI PANCAPURI, GUNUNG SUGIH CIWANDAN KOTA CILEGON",
+  },
+  {
+    year: "2017 - 2024",
+    client: "PT. MODERN WIDYA TECHNIKAL",
+    description: "SCAFFOLDING WORK",
+    location: "KAWASAN INDUSTRI KARAWANG",
+  },
+];
+
+export const certificateImages = ["/img/certifications/certificate-1.png", "/img/certifications/certificate-2.png", "/img/certifications/certificate-3.png"];

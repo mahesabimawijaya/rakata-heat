@@ -1,7 +1,11 @@
-import Container from "@/components/atoms/container";
+import SemiHeroSection from "@/components/organisms/semi-hero-section";
+import ServicesSection from "@/components/organisms/services-section";
 
 export default function Services() {
-  <Container>
-    <div>services page</div>
-  </Container>;
+  return (
+    <>
+      <SemiHeroSection title="Services" subtitle="Best Solutions for heat treatment." imgUrl="/img/services/services.png" />
+      <ServicesSection />
+    </>
+  );
 }
