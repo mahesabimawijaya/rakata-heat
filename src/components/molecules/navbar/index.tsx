@@ -2,6 +2,7 @@
 
 import Container from "@/components/atoms/container";
 import Flex from "@/components/atoms/flex";
+import { Reveal } from "@/components/templates/Reveal";
 import { links } from "@/data/data";
 import usePath from "@/hooks/usePath";
 import Image from "next/image";
@@ -32,7 +33,9 @@ const Navbar: FC = () => {
   return (
     <nav
       className={
-        path ? `sticky top-0 z-50 w-full h-20 flex items-center shadow-md bg-white` : `${scrolled ? "bg-white shadow-md" : "bg-transparent"} fixed z-50 w-full h-20 flex items-center duration-200`
+        path
+          ? `fade-in sticky top-0 z-50 w-full h-16 md:h-20 flex items-center shadow-md bg-white`
+          : `${scrolled ? "bg-white shadow-md" : "bg-transparent"} fade-in fixed z-50 w-full h-16 md:h-20 flex items-center duration-200`
       }
     >
       <Container className="w-full flex items-center justify-between relative">
@@ -75,7 +78,7 @@ const Navbar: FC = () => {
         </Flex>
       </Container>
       {isOpen && (
-        <Flex direction="col" directionMd="col" gap="gap-10" align="start" className="absolute w-full top-0 left-0 bg-brand-700 h-screen text-white p-5 bg-opacity-90 backdrop-blur-sm">
+        <Flex direction="col" directionMd="col" gap="gap-20" align="start" className="absolute w-full top-0 left-0 bg-brand-700 h-screen text-white p-5 bg-opacity-90 backdrop-blur-sm slide-right">
           <Flex justify="justify-between" align="center">
             <Link href={"/"}>
               <h1 className="text-2xl font-bold font-serif">RAKA HEAT</h1>
@@ -84,16 +87,18 @@ const Navbar: FC = () => {
               <FaTimes size={30} />
             </button>
           </Flex>
-          <Flex direction="col" directionMd="col" gap="gap-5" align="start" className="w-full">
-            {links.map((link, i) => (
-              <Link key={i} href={link.url}>
-                <button onClick={() => setIsOpen(false)} className="w-full text-2xl font-medium flex justify-between">
-                  <p>{link.label}</p>
-                  <FaChevronRight />
-                </button>
-              </Link>
-            ))}
-          </Flex>
+          <Reveal delay={0}>
+            <Flex direction="col" directionMd="col" gap="gap-5" align="start" className="w-full">
+              {links.map((link, i) => (
+                <Link key={i} href={link.url}>
+                  <button onClick={() => setIsOpen(false)} className="w-full text-2xl font-medium flex justify-between">
+                    <p>{link.label}</p>
+                    <FaChevronRight />
+                  </button>
+                </Link>
+              ))}
+            </Flex>
+          </Reveal>
         </Flex>
       )}
     </nav>

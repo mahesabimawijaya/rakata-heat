@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 import { certificateImages } from "@/data/data";
+import { Reveal } from "@/components/templates/Reveal";
 
 const CertificationSection = () => {
   return (
@@ -18,28 +19,34 @@ const CertificationSection = () => {
       <Container>
         <Flex direction="col" directionMd="col" align="start">
           <Flex direction="col" directionMd="col" align="start" gap="gap-3">
-            <SectionTitle>Certifications</SectionTitle>
-            <p className="capitalize font-medium">Keahlian Terbukti, Dipercaya oleh Pemimpin Industri</p>
+            <Reveal>
+              <SectionTitle>Certifications</SectionTitle>
+            </Reveal>
+            <Reveal>
+              <p className="capitalize font-medium">Keahlian Terbukti, Dipercaya oleh Pemimpin Industri</p>
+            </Reveal>
           </Flex>
-          <Swiper
-            centeredSlides={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            navigation
-            pagination={{ type: "bullets" }}
-            modules={[Navigation, Pagination, Autoplay]}
-            className="w-full max-w-md"
-          >
-            {certificateImages.map((img, i) => (
-              <SwiperSlide key={i}>
-                <div className="relative w-full h-[500px]">
-                  <Image src={img} alt={img} fill />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <Reveal>
+            <Swiper
+              centeredSlides={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              navigation
+              pagination={{ type: "bullets" }}
+              modules={[Navigation, Pagination, Autoplay]}
+              className="w-full max-w-md"
+            >
+              {certificateImages.map((img, i) => (
+                <SwiperSlide key={i}>
+                  <div className="relative w-full h-[500px]">
+                    <Image src={img} alt={img} fill />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Reveal>
         </Flex>
       </Container>
     </section>
