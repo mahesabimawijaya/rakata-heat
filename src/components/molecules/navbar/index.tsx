@@ -32,7 +32,9 @@ const Navbar: FC = () => {
   return (
     <nav
       className={
-        path ? `sticky top-0 z-50 w-full h-20 flex items-center shadow-md bg-white` : `${scrolled ? "bg-white shadow-md" : "bg-transparent"} fixed z-50 w-full h-20 flex items-center duration-200`
+        path
+          ? `fade-in sticky top-0 z-50 w-full h-20 flex items-center shadow-md bg-white`
+          : `${scrolled ? "bg-white shadow-md" : "bg-transparent"} fade-in fixed z-50 w-full h-20 flex items-center duration-200`
       }
     >
       <Container className="w-full flex items-center justify-between relative">

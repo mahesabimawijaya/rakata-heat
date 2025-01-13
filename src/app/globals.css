@@ -9,3 +9,16 @@
   text-overflow: ellipsis;
   -webkit-line-clamp: 3; /* Change this number to set the number of lines */
 }
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: appear 1s ease-in-out;
+}
