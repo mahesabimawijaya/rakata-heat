@@ -19,6 +19,21 @@
   }
 }
 
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
 .fade-in {
   animation: appear 1s ease-in-out;
+}
+
+.slide-right {
+  animation: slide-right 0.5s ease-in-out;
 }

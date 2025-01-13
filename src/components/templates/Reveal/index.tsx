@@ -6,9 +6,10 @@ import { motion, useInView, useAnimation } from "framer-motion";
 interface Props {
   children: ReactNode;
   width?: string;
+  delay?: number;
 }
 
-export const Reveal = ({ children, width = "fit-content" }: Props) => {
+export const Reveal = ({ children, width = "fit-content", delay = 0.25 }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -21,7 +22,7 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
   }, [isInView, mainControls]);
 
   return (
-    <div ref={ref} className={`relative ${width}`}>
+    <div ref={ref} className={`${width}`}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
@@ -29,7 +30,7 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{ duration: 0.5, delay: delay }}
       >
         {children}
       </motion.div>

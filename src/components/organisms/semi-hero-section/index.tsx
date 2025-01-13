@@ -13,7 +13,7 @@ interface SemiHeroSectionProps {
 const SemiHeroSection: FC<SemiHeroSectionProps> = ({ title, subtitle, imgUrl }) => {
   return (
     <section className={`relative w-full h-[50vh]`}>
-      <Image src={imgUrl} alt={title} fill priority className="relative object-cover object-center blur-sm brightness-90" />
+      <Image src={imgUrl} alt={title} fill priority className="relative object-cover object-center brightness-90" />
       <Flex className="absolute text-white bg-gradient-to-r from-brand-600 to-transparent w-full h-full top-0 left-0">
         <Container className="w-full">
           <Flex direction="col" directionMd="col" align="start">

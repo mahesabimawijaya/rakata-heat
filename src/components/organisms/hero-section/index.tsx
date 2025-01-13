@@ -7,7 +7,7 @@ import { FC } from "react";
 
 const HeroSection: FC = () => {
   return (
-    <section className="flex items-center w-full h-screen pt-20 bg-[url(/img/hero/hero.jpg)] bg-cover bg-center text-white fade-in">
+    <section className="flex items-center w-full h-screen pt-20 bg-[url(/img/hero/hero-pltu-2.jpeg)] bg-cover bg-center text-white fade-in">
       <Container className="w-full">
         <Flex direction="col" directionMd="col" align="start">
           <Reveal>
