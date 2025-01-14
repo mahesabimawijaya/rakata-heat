@@ -5,9 +5,10 @@ import Container from "@/components/atoms/container";
 import Flex from "@/components/atoms/flex";
 import Image from "next/image";
 import Link from "next/link";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaChevronRight, FaTimes } from "react-icons/fa";
 import usePath from "@/hooks/usePath";
 import { links } from "@/data/data";
+import { Reveal } from "@/components/templates/Reveal";
 
 const Navbar: FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +38,16 @@ const Navbar: FC = () => {
       <Container className="w-full flex items-center justify-between relative">
         <Link href="/">
           <Flex>
-            <Image src="/img/rakata-logo.png" alt="logo" width={100} height={100} priority />
+            <div className="relative w-[65px] h-[65px] lg:w-[100px] md:h-[100px]">
+              <Image
+                src="/img/rakata-logo.png"
+                alt="logo"
+                fill // Automatically fills the container
+                priority
+                sizes="(max-width: 768px) 65px, 100px"
+                className="object-contain" // Ensures the image retains its aspect ratio
+              />
+            </div>
             <h1
               className={`${
                 path
@@ -65,7 +75,32 @@ const Navbar: FC = () => {
           ))}
         </Flex>
       </Container>
-      {isOpen && <div>{/* Mobile menu content */}</div>}
+      {isOpen && (
+        <div>
+          <Flex direction="col" directionMd="col" gap="gap-20" align="start" className="absolute w-full top-0 left-0 bg-brand-700 h-screen text-white p-5 bg-opacity-90 backdrop-blur-sm slide-right">
+            <Flex justify="justify-between" align="center">
+              <Link href={"/"}>
+                <h1 className="text-2xl font-bold font-serif">RAKA HEAT</h1>
+              </Link>
+              <button onClick={() => setIsOpen(false)}>
+                <FaTimes size={30} />
+              </button>
+            </Flex>
+            <Reveal delay={0}>
+              <Flex direction="col" directionMd="col" gap="gap-5" align="start" className="w-full">
+                {links.map((link, i) => (
+                  <Link key={i} href={link.url}>
+                    <button onClick={() => setIsOpen(false)} className="w-full text-2xl font-medium flex justify-between">
+                      <p>{link.label}</p>
+                      <FaChevronRight />
+                    </button>
+                  </Link>
+                ))}
+              </Flex>
+            </Reveal>
+          </Flex>
+        </div>
+      )}
     </nav>
   );
 };
