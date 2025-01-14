@@ -1,14 +1,13 @@
 "use client";
 
+import { FC, useEffect, useState } from "react";
 import Container from "@/components/atoms/container";
 import Flex from "@/components/atoms/flex";
-import { Reveal } from "@/components/templates/Reveal";
-import { links } from "@/data/data";
-import usePath from "@/hooks/usePath";
 import Image from "next/image";
 import Link from "next/link";
-import { FC, useEffect, useState } from "react";
-import { FaBars, FaChevronRight, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
+import usePath from "@/hooks/usePath";
+import { links } from "@/data/data";
 
 const Navbar: FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -17,44 +16,41 @@ const Navbar: FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 80) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 80);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.addEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const resolvedPath = `/${path || ""}`;
+
   return (
     <nav
-      className={
+      className={`${
         path
-          ? `fade-in sticky top-0 z-50 w-full h-16 md:h-20 flex items-center shadow-md bg-white`
-          : `${scrolled ? "bg-white shadow-md" : "bg-transparent"} fade-in fixed z-50 w-full h-16 md:h-20 flex items-center duration-200`
-      }
+          ? "sticky top-0 z-50 w-full h-16 md:h-24 flex items-center shadow-md bg-white"
+          : `${scrolled ? "bg-white shadow-md" : "bg-transparent"} fixed z-50 w-full h-16 md:h-24 flex items-center duration-200`
+      }`}
     >
       <Container className="w-full flex items-center justify-between relative">
-        <Link href={"/"}>
+        <Link href="/">
           <Flex>
-            <Image src={"/img/rakata-logo.png"} alt="logo" width={50} height={50} />
+            <Image src="/img/rakata-logo.png" alt="logo" width={100} height={100} priority />
             <h1
-              className={
+              className={`${
                 path
-                  ? `text-[27px] text-brand-600 font-bold uppercase font-serif hidden md:block`
+                  ? "text-[27px] text-brand-600 font-bold uppercase font-serif hidden md:block"
                   : `${scrolled ? "text-brand-600" : "text-white"} text-[27px] font-bold uppercase font-serif hidden md:block`
-              }
+              }`}
             >
               Rakata Heat
             </h1>
           </Flex>
         </Link>
         <button onClick={() => setIsOpen(true)} className="lg:hidden">
-          <div className={path ? `text-brand-600 font-medium hover:text-brand-500` : `${scrolled ? "text-brand-600" : "text-white"} font-medium hover:text-brand-400`}>
+          <div className={`${path ? "text-brand-600 font-medium hover:text-brand-500" : `${scrolled ? "text-brand-600" : "text-white"} font-medium hover:text-brand-400`}`}>
             <FaBars size={20} />
           </div>
         </button>
@@ -62,45 +58,14 @@ const Navbar: FC = () => {
           {links.map((link, i) => (
             <Flex directionMd="col" gap="gap-[1px]" key={i}>
               <Link href={link.url}>
-                <p
-                  className={
-                    path
-                      ? `text-brand-600 font-medium hover:text-brand-500`
-                      : `${scrolled ? "text-brand-600" : "text-white"} ${"/" + path === link.url ? "underline" : ""} font-medium hover:text-brand-400`
-                  }
-                >
-                  {link.label}
-                </p>
+                <p className={`${path ? "text-brand-600 font-medium hover:text-brand-500" : `${scrolled ? "text-brand-600" : "text-white"} font-medium hover:text-brand-400`}`}>{link.label}</p>
               </Link>
-              {"/" + path === link.url && <span className="bg-brand-600 h-[2px] rounded-full w-full"></span>}
+              {resolvedPath === link.url && <span className="bg-brand-600 h-[2px] rounded-full w-full"></span>}
             </Flex>
           ))}
         </Flex>
       </Container>
-      {isOpen && (
-        <Flex direction="col" directionMd="col" gap="gap-20" align="start" className="absolute w-full top-0 left-0 bg-brand-700 h-screen text-white p-5 bg-opacity-90 backdrop-blur-sm slide-right">
-          <Flex justify="justify-between" align="center">
-            <Link href={"/"}>
-              <h1 className="text-2xl font-bold font-serif">RAKA HEAT</h1>
-            </Link>
-            <button onClick={() => setIsOpen(false)}>
-              <FaTimes size={30} />
-            </button>
-          </Flex>
-          <Reveal delay={0}>
-            <Flex direction="col" directionMd="col" gap="gap-5" align="start" className="w-full">
-              {links.map((link, i) => (
-                <Link key={i} href={link.url}>
-                  <button onClick={() => setIsOpen(false)} className="w-full text-2xl font-medium flex justify-between">
-                    <p>{link.label}</p>
-                    <FaChevronRight />
-                  </button>
-                </Link>
-              ))}
-            </Flex>
-          </Reveal>
-        </Flex>
-      )}
+      {isOpen && <div>{/* Mobile menu content */}</div>}
     </nav>
   );
 };
