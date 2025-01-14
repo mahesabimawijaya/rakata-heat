@@ -19,6 +19,10 @@ export const links = [
     label: "Contact us",
     url: "/contact-us",
   },
+  {
+    label: "Gallery",
+    url: "/gallery",
+  },
 ];
 
 export const visionMission = [
