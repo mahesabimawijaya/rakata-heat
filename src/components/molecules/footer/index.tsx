@@ -36,6 +36,14 @@ const Footer: FC = () => {
               <p className="text-sm">+62217654512</p>
             </Flex>
             <Flex>
+              <FaPhoneAlt size={20} />
+              <p className="text-sm">+6282111209072</p>
+            </Flex>
+            <Flex>
+              <FaPhoneAlt size={20} />
+              <p className="text-sm">+628119561251</p>
+            </Flex>
+            <Flex>
               <FaFax size={20} />
               <p className="text-sm">+62217654522</p>
             </Flex>

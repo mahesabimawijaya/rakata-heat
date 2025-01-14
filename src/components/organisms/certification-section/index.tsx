@@ -15,7 +15,7 @@ import { Reveal } from "@/components/templates/Reveal";
 
 const CertificationSection = () => {
   return (
-    <section>
+    <section className="py-20">
       <Container>
         <Flex direction="col" directionMd="col" align="start">
           <Flex direction="col" directionMd="col" align="start" gap="gap-3">
