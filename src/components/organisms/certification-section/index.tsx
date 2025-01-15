@@ -36,11 +36,11 @@ const CertificationSection = () => {
               navigation
               pagination={{ type: "bullets" }}
               modules={[Navigation, Pagination, Autoplay]}
-              className="w-full max-w-md"
+              className="w-full max-w-md md:max-w-[800px]"
             >
               {certificateImages.map((img, i) => (
                 <SwiperSlide key={i}>
-                  <div className="relative w-full h-[500px]">
+                  <div className={`${i === certificateImages.length - 1 ? "w-full" : "w-[350px] md:w-[450px]"} mx-auto relative w-full h-[500px]`}>
                     <Image src={img} alt={img} fill />
                   </div>
                 </SwiperSlide>

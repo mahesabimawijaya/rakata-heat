@@ -21,9 +21,8 @@ const ProjectsSection: FC = () => {
           <Flex justify="justify-center" gap="gap-10" className="w-full flex-wrap">
             {projects.map((project, i) => (
               <Reveal key={i}>
-                <Flex direction="col" gap="gap-3 md:gap-10" align="items-center md:items-start" className="bg-neutral-100 border shadow-lg rounded-lg p-3 md:p-5">
-                  <p className="text-center text-xl font-medium">{project.year}</p>
-
+                <Flex direction="col" gap="gap-3 md:gap-10" align="start" className="bg-neutral-100 border shadow-lg rounded-lg p-3 md:p-5">
+                  <p className="text-right text-xl font-medium">{project.year}</p>
                   <Flex direction="col" directionMd="col" align="start" className="max-w-80">
                     <Flex align="start" gap="gap-1">
                       <p className="w-24 flex-shrink-0 text-sm font-medium text-neutral-800">Client</p>:<p className="text-sm">{project.client}</p>

@@ -12,10 +12,10 @@ const Footer: FC = () => {
       <Container>
         <Flex direction="col" align="items-center md:items-start" justify="justify-start md:justify-between" gap="gap-10 md:gap-4" className="py-16">
           <Flex className="bg-white p-3 rounded-lg h-fit w-fit">
-            <div className="relative w-14 h-12">
+            <div className="relative w-14 h-12 lg:w-[150px] lg:h-[140px] flex-shrink-0">
               <Image src={"/img/rakata-logo.png"} alt="logo" fill />
             </div>
-            <h2 className="uppercase text-brand-600 font-serif font-bold text-xl">RAKATA HEAT</h2>
+            <h2 className="uppercase text-brand-600 font-serif font-bold text-xl lg:text-4xl">RAKATA HEAT</h2>
           </Flex>
           <Flex direction="col" directionMd="col" align="items-center md:items-start" className="max-w-sm">
             <p className="font-medium text-center mb-2">Company</p>
