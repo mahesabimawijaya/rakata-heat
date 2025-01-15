@@ -500,4 +500,4 @@ export const projects = [
   },
 ];
 
-export const certificateImages = ["/img/certifications/certificate-1.png", "/img/certifications/certificate-2.png", "/img/certifications/certificate-3.png"];
+export const certificateImages = ["/img/certifications/certificate-1.png", "/img/certifications/certificate-2.png", "/img/certifications/certificate-3.png", "/img/certifications/certificate-4.jpg"];

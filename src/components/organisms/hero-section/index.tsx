@@ -36,7 +36,7 @@ const HeroSection: FC = () => {
                 </Reveal>
                 <Reveal>
                   <Button className="w-fit mt-6">
-                    <Link href={"/about-us"}>Hubungi kami</Link>
+                    <Link href={"/contact-us"}>Hubungi kami</Link>
                   </Button>
                 </Reveal>
               </Flex>
@@ -55,7 +55,7 @@ const HeroSection: FC = () => {
                 </Reveal>
                 <Reveal>
                   <Button className="w-fit mt-6">
-                    <Link href={"/about-us"}>Hubungi kami</Link>
+                    <Link href={"/contact-us"}>Hubungi kami</Link>
                   </Button>
                 </Reveal>
               </Flex>

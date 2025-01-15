@@ -31,18 +31,18 @@ const Navbar: FC = () => {
     <nav
       className={`${
         path
-          ? "sticky top-0 z-50 w-full h-16 md:h-24 lg:h-28 flex items-center shadow-md bg-white"
-          : `${scrolled ? "bg-white shadow-md" : "bg-transparent"} fixed z-50 w-full h-16 md:h-24 lg:h-28 flex items-center duration-200`
+          ? "sticky top-0 z-50 w-full py-[2px] flex items-center shadow-md bg-white bg-opacity-90 backdrop-blur-md"
+          : `${scrolled ? "bg-white shadow-md bg-opacity-90 backdrop-blur-md" : "bg-transparent"} fixed z-50 w-full py-[2px] flex items-center duration-200`
       }`}
     >
       <Container className="w-full flex items-center justify-between relative">
         <Link href="/">
           <Flex>
-            <div className="relative w-[65px] h-[65px] lg:w-[120px] md:h-[120px]">
+            <div className="relative w-[65px] h-[65px] lg:w-[150px] lg:h-[150px]">
               <Image
                 src="/img/rakata-logo.png"
                 alt="logo"
-                fill // Automatically fills the container
+                fill
                 priority
                 sizes="(max-width: 768px) 65px, 100px"
                 className="object-contain" // Ensures the image retains its aspect ratio

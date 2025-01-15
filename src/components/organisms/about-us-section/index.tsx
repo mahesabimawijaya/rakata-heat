@@ -24,9 +24,8 @@ const AboutUsSection: FC = () => {
             </Reveal>
           </Flex>
           <Reveal width="w-full md:w-1/2">
-            <Flex justify="justify-end" className="pt-16 relative max-w-screen-sm ">
-              <Image src={"/img/about-us/about-us-1.png"} alt="about-us" width={200} height={200} className="rounded-xl relative" />
-              <Image src={"/img/about-us/about-us-2.png"} alt="about-us" width={200} height={200} className="rounded-xl absolute top-[-10px] left-0 md:left-auto md:right-24" />
+            <Flex justify="justify-center">
+              <Image src={"/img/about-us/about-us-1.jpg"} alt="about-us" width={250} height={250} className="rounded-xl" />
             </Flex>
           </Reveal>
         </Flex>
