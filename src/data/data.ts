@@ -501,3 +501,78 @@ export const projects = [
 ];
 
 export const certificateImages = ["/img/certifications/certificate-1.png", "/img/certifications/certificate-2.png", "/img/certifications/certificate-3.png", "/img/certifications/certificate-4.jpg"];
+
+export const equipments = [
+  {
+    imgUrl: "/img/equipments/equipment-1.png",
+    description: "HIGH BURNER VELOCITY : 8.000.000 Btu",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-2.png",
+    description: 'GAS MANIFOLD 2", Branch Connection, and High Pressure Regulator',
+  },
+  {
+    imgUrl: "/img/equipments/equipment-3.png",
+    description: 'GAS MANIFOLD 2", Branch Connection, and High Pressure Regulator',
+  },
+  {
+    imgUrl: "/img/equipments/equipment-4.png",
+    description: "GAS TRAIN and GAS CONTROL MODULE",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-5.png",
+    description: 'MEDIUM REGULATOR, AIR HOSE 6", GAS HOSE 2", FAN BLOWER',
+  },
+  {
+    imgUrl: "/img/equipments/equipment-6.png",
+    description: "Temperature Record Chino-EH100",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-7.png",
+    description: "T. W. U (Tact Welding Unit)",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-8.png",
+    description: `Thermocouple Wire "K" Type 0.8mm Range Temperature 1200 C`,
+  },
+  {
+    imgUrl: "/img/equipments/equipment-9.png",
+    description: "Magic Eye (Ultraviolet Censored)",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-10.png",
+    description: "Connector Brash 180V an Sleeves",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-11.png",
+    description: "Thermocouple & Chim Block",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-12.png",
+    description: "Thermocouple Male Socket",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-13.png",
+    description: "Auto PWHT Machine 44KVA 2 Channel",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-14.png",
+    description: "Auto PWHT Machine 44KVA 2 Channel",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-15.png",
+    description: "Elements Heater 60V and 80V",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-16.png",
+    description: "3 Way Splitter 300A/180V No",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-17.png",
+    description: "Cable Splitter 300A/180V",
+  },
+  {
+    imgUrl: "/img/equipments/equipment-18.png",
+    description: "Compensating Cable",
+  },
+];
