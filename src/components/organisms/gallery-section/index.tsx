@@ -38,7 +38,7 @@ const GallerySection: FC = () => {
               {images.slice(columnIndex * 3, columnIndex * 3 + 3).map((src, index) => (
                 <Reveal key={index}>
                   <div>
-                    <Image className="h-auto max-w-full rounded-lg" src={src} alt={`Gallery item ${index + 1}`} width={500} height={500} layout="responsive" />
+                    <Image className="h-auto max-w-full rounded-lg" src={src} alt={`Gallery item ${index + 1}`} width={500} height={500} />
                   </div>
                 </Reveal>
               ))}
