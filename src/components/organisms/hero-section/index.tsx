@@ -29,10 +29,10 @@ const HeroSection: FC = () => {
             <Container className="w-full">
               <Flex direction="col" directionMd="col" align="start">
                 <Reveal>
-                  <h1 className="text-3xl lg:text-5xl font-bold md:w-1/2 leading-tight">King of RDO Indonesia</h1>
+                  <h1 className="text-3xl lg:text-5xl font-bold md:w-1/2 leading-tight">Leaders in Industrial Heat Treatment and Engineering Solutions</h1>
                 </Reveal>
                 <Reveal>
-                  <h3 className="md:text-lg md:w-1/2">Delivering the Best Refractory Dry Out Solutions in Indonesia. Precision, Efficiency, and Excellence You Can Rely On!</h3>
+                  <h3 className="md:text-lg md:w-1/2">Advanced Heat Treatment Services Designed to Improve the Reliability, Efficiency, and Longevity of Your Materials in Demanding Environments</h3>
                 </Reveal>
                 <Reveal>
                   <Button className="w-fit mt-6">
@@ -48,10 +48,10 @@ const HeroSection: FC = () => {
             <Container className="w-full">
               <Flex direction="col" directionMd="col" align="start">
                 <Reveal>
-                  <h1 className="text-3xl lg:text-5xl font-bold md:w-1/2 leading-tight">Leaders in Industrial Heat Treatment and Engineering Solutions</h1>
+                  <h1 className="text-3xl lg:text-5xl font-bold md:w-1/2 leading-tight">King of RDO Indonesia</h1>
                 </Reveal>
                 <Reveal>
-                  <h3 className="md:text-lg md:w-1/2">Advanced Heat Treatment Services Designed to Improve the Reliability, Efficiency, and Longevity of Your Materials in Demanding Environments</h3>
+                  <h3 className="md:text-lg md:w-1/2">Delivering the Best Refractory Dry Out Solutions in Indonesia. Precision, Efficiency, and Excellence You Can Rely On!</h3>
                 </Reveal>
                 <Reveal>
                   <Button className="w-fit mt-6">

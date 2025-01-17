@@ -575,4 +575,8 @@ export const equipments = [
     imgUrl: "/img/equipments/equipment-18.png",
     description: "Compensating Cable",
   },
+  {
+    imgUrl: "/img/equipments/equipment-19.jpg",
+    description: "UTILITY MACHINE",
+  },
 ];
