@@ -12,7 +12,7 @@ const VisionMissionSection: FC = () => {
         <Flex direction="col" justify="justify-between" align="start">
           <Reveal width="w-[100%] lg:w-[50%]">
             <div className="relative w-full max-w-lg h-96">
-              <Image src={"/img/about-us/about-us.jpeg"} alt="group-photo" fill className="object-cover object-center rounded-lg" />
+              <Image src={"/img/teams/teams.jpg"} alt="group-photo" fill className="object-cover object-center rounded-lg" />
             </div>
           </Reveal>
           <Flex direction="col" directionMd="col" align="start">
