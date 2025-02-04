@@ -580,3 +580,81 @@ export const equipments = [
     description: "UTILITY MACHINE",
   },
 ];
+
+export const licenses = [
+  {
+    no: "AHU-AH.01.03-0062613",
+    name: "Pemberitahuan Perubahan Data Perseroan dan Persetujuan Perubahan Anggaran Dasar",
+    description: "Persetujuan Perubahan Anggaran Dasar Perseroan Terbatas PT. RAKATA HEAT",
+  },
+  {
+    no: "AHU-0044680.AH.01.02.TAHUN 2021",
+    name: "LAMPIRAN KEPUTUSAN MENTERI HUKUM DAN HAM REPUBLIK INDONESIA",
+    description: "Persetujuan Perubahan Anggaran Dasar Perseroan Terbatas PT. RAKATA HEAT",
+  },
+  {
+    no: "AHU-0044680.AH.01.02.TAHUN 2021",
+    name: "KEPUTUSAN MENTERI HUKUM DAN HAM REPUBLIK INDONESIA",
+    description: "Persetujuan Perubahan Anggaran Dasar Perseroan Terbatas PT. RAKATA HEAT",
+  },
+  {
+    no: "2008210013666",
+    name: "PERIZINAN BERUSAHA BERBASIS RISIKO",
+    description: "Perizinan Berusaha Berbasis Risiko PT. RAKATA HEAT",
+  },
+  {
+    no: "2008210013666",
+    name: "PERNYATAAN MANDIRI",
+    description: "Menjaga Keselamatan, Keamanan, Kesehatan, dan Pelestarian Fungsi Lingkungan (K3L)",
+  },
+  {
+    no: "2008210013666",
+    name: "PERNYATAAN MANDIRI",
+    description: "Kesediaan Memenuhi Kewajiban",
+  },
+  {
+    no: "2008210013666",
+    name: "SURAT PERNYATAAN USAHA MIKRO ATAU USAHA KECIL TERKAIT TATA RUANG",
+    description: "Surat Pernyataan Usaha Mikro atau Usaha Kecil Terkait Tata Ruang",
+  },
+  {
+    no: "20082100136662022",
+    name: "PERIZINAN BERUSAHA BERBASIS RISIKO",
+    description: "Perizinan Berusaha Berbasis Risiko PT. RAKATA HEAT",
+  },
+  {
+    no: "503/001131-BP2T/30-08/PK/VIII/2016",
+    name: "SURAT IZIN USAHA PERDAGANGAN (SIUP) KECIL",
+    description: "Surat Izin Usaha Perdagangan (SIUP) Kecil PT. RAKATA HEAT",
+  },
+  {
+    no: "2008210013666",
+    name: "SURAT PERNYATAAN KESANGGUPAN PENGELOLAAN DAN PEMANTAUAN LINGKUNGAN HIDUP (SPPL)",
+    description: "Surat Pernyataan Kesanggupan Pengelolaan dan Pemantauan Lingkungan Hidup (SPPL)",
+  },
+  {
+    no: "BERITA NEGARA NO. 068 TAMBAHAN BERITA NEGARA RI NO. 025319 TANGGAL TERBIT 24 AGUSTUS 2021",
+    name: "PERUM PERCETAKAN NEGARA RI",
+    description: "Perubahan RAKATA HEAT Berkedudukan di TANGERANG SELATAN sesuai dengan AKta No.3, Tanggal 18 AGustus 2021. Yang dibuat oleh Notaris ARYANI SH.",
+  },
+  {
+    no: "AHU-19929.AH.01.01.TAHUN 2011",
+    name: "PENGESAHAN BADAN HUKUM PERSEROAN",
+    description: "Pengesahan Badan Hukum Perseroan Oleh Menteri Hukum dan HAM RI",
+  },
+  {
+    no: "2008210013666",
+    name: "PERNYATAAN MANDIRI KESEDIAAN MEMENUHI STANDAR USAHA",
+    description: "Pernyataan Mandiri Kesediaan Memenuhi Standar Usaha PT. RAKATA HEAT",
+  },
+  {
+    no: "2008210013666",
+    name: "TANDA DAFTAR PERUSAHAAN PERSEROAN TERBATAS",
+    description: "Pernyataan Mandiri Kesediaan Memenuhi Standar Usaha PT. RAKATA HEAT",
+  },
+  {
+    no: "AHU-0081027.AH.01.11.TAHUN 2016",
+    name: "PENERIMAAN PEMBERITAHUAN PERUBAHAN DATA PERSEROAN PT. RAKATA HEAT",
+    description: "Penerimaan Pemberitahuan Perubahan Data Perseroan PT. RAKATA HEAT",
+  },
+];

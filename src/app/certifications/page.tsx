@@ -1,4 +1,5 @@
 import CertificationSection from "@/components/organisms/certification-section";
+import LicenseSection from "@/components/organisms/licenses-section";
 import SemiHeroSection from "@/components/organisms/semi-hero-section";
 import { Metadata } from "next";
 
@@ -14,6 +15,7 @@ export default function Certifications() {
       <main>
         <SemiHeroSection title="Certifications" subtitle="Empowering Trust Through Accreditation" imgUrl="/img/certifications/certificate-4.jpg" />
         <CertificationSection />
+        <LicenseSection />
       </main>
     </>
   );

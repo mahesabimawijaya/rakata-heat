@@ -38,15 +38,8 @@ const Navbar: FC = () => {
       <Container className="w-full flex items-center justify-between relative">
         <Link href="/">
           <Flex>
-            <div className="relative w-[65px] h-[65px] lg:w-[150px] lg:h-[150px]">
-              <Image
-                src="/img/rakata-logo.png"
-                alt="logo"
-                fill
-                priority
-                sizes="(max-width: 768px) 65px, 100px"
-                className="object-contain" // Ensures the image retains its aspect ratio
-              />
+            <div className="relative w-[65px] h-[65px] xl:w-[150px] xl:h-[150px]">
+              <Image src="/img/rakata-logo.png" alt="logo" fill priority sizes="(max-width: 768px) 65px, 100px" className="object-contain" />
             </div>
             <h1
               className={`${
@@ -59,12 +52,12 @@ const Navbar: FC = () => {
             </h1>
           </Flex>
         </Link>
-        <button onClick={() => setIsOpen(true)} className="lg:hidden">
+        <button onClick={() => setIsOpen(true)} className="xl:hidden">
           <div className={`${path ? "text-brand-600 font-medium hover:text-brand-500" : `${scrolled ? "text-brand-600" : "text-white"} font-medium hover:text-brand-400`}`}>
             <FaBars size={20} />
           </div>
         </button>
-        <Flex gap="gap-[40px]" align="start" className="hidden lg:flex">
+        <Flex gap="gap-[40px]" align="start" className="hidden xl:flex">
           {links.map((link, i) => (
             <Flex directionMd="col" gap="gap-[1px]" key={i}>
               <Link href={link.url}>
@@ -80,7 +73,7 @@ const Navbar: FC = () => {
           <Flex direction="col" directionMd="col" gap="gap-20" align="start" className="absolute w-full top-0 left-0 bg-brand-700 h-screen text-white p-5 bg-opacity-90 backdrop-blur-sm slide-right">
             <Flex justify="justify-between" align="center">
               <Link href={"/"}>
-                <h1 className="text-2xl font-bold font-serif">RAKA HEAT</h1>
+                <h1 className="text-2xl font-bold font-serif">RAKATA HEAT</h1>
               </Link>
               <button onClick={() => setIsOpen(false)}>
                 <FaTimes size={30} />
