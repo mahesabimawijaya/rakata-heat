@@ -32,20 +32,33 @@ const Navbar: FC = () => {
       className={`${
         path
           ? "sticky top-0 z-50 w-full py-[2px] flex items-center shadow-md bg-white bg-opacity-90 backdrop-blur-md"
-          : `${scrolled ? "bg-white shadow-md bg-opacity-90 backdrop-blur-md" : "bg-transparent"} fixed z-50 w-full py-[2px] flex items-center duration-200`
+          : `${
+              scrolled
+                ? "bg-white shadow-md bg-opacity-90 backdrop-blur-md"
+                : "bg-transparent"
+            } fixed z-50 w-full py-[2px] flex items-center duration-200`
       }`}
     >
       <Container className="w-full flex items-center justify-between relative">
         <Link href="/">
           <Flex>
-            <div className="relative w-[65px] h-[65px] xl:w-[150px] xl:h-[150px]">
-              <Image src="/img/rakata-logo.png" alt="logo" fill priority sizes="(max-width: 768px) 65px, 100px" className="object-contain" />
+            <div className="relative w-[65px] h-[65px]">
+              <Image
+                src="/img/rakata-logo.png"
+                alt="logo"
+                fill
+                priority
+                sizes="(max-width: 768px) 65px, 100px"
+                className="object-contain"
+              />
             </div>
             <h1
               className={`${
                 path
                   ? "text-[27px] text-brand-600 font-bold uppercase font-serif hidden md:block"
-                  : `${scrolled ? "text-brand-600" : "text-white"} text-[27px] font-bold uppercase font-serif hidden md:block`
+                  : `${
+                      scrolled ? "text-brand-600" : "text-white"
+                    } text-[27px] font-bold uppercase font-serif hidden md:block`
               }`}
             >
               Rakata Heat
@@ -53,7 +66,15 @@ const Navbar: FC = () => {
           </Flex>
         </Link>
         <button onClick={() => setIsOpen(true)} className="xl:hidden">
-          <div className={`${path ? "text-brand-600 font-medium hover:text-brand-500" : `${scrolled ? "text-brand-600" : "text-white"} font-medium hover:text-brand-400`}`}>
+          <div
+            className={`${
+              path
+                ? "text-brand-600 font-medium hover:text-brand-500"
+                : `${
+                    scrolled ? "text-brand-600" : "text-white"
+                  } font-medium hover:text-brand-400`
+            }`}
+          >
             <FaBars size={20} />
           </div>
         </button>
@@ -61,16 +82,34 @@ const Navbar: FC = () => {
           {links.map((link, i) => (
             <Flex directionMd="col" gap="gap-[1px]" key={i}>
               <Link href={link.url}>
-                <p className={`${path ? "text-brand-600 font-medium hover:text-brand-500" : `${scrolled ? "text-brand-600" : "text-white"} font-medium hover:text-brand-400`}`}>{link.label}</p>
+                <p
+                  className={`${
+                    path
+                      ? "text-brand-600 font-medium hover:text-brand-500"
+                      : `${
+                          scrolled ? "text-brand-600" : "text-white"
+                        } font-medium hover:text-brand-400`
+                  }`}
+                >
+                  {link.label}
+                </p>
               </Link>
-              {resolvedPath === link.url && <span className="bg-brand-600 h-[2px] rounded-full w-full"></span>}
+              {resolvedPath === link.url && (
+                <span className="bg-brand-600 h-[2px] rounded-full w-full"></span>
+              )}
             </Flex>
           ))}
         </Flex>
       </Container>
       {isOpen && (
         <div>
-          <Flex direction="col" directionMd="col" gap="gap-20" align="start" className="absolute w-full top-0 left-0 bg-brand-700 h-screen text-white p-5 bg-opacity-90 backdrop-blur-sm slide-right">
+          <Flex
+            direction="col"
+            directionMd="col"
+            gap="gap-20"
+            align="start"
+            className="absolute w-full top-0 left-0 bg-brand-700 h-screen text-white p-5 bg-opacity-90 backdrop-blur-sm slide-right"
+          >
             <Flex justify="justify-between" align="center">
               <Link href={"/"}>
                 <h1 className="text-2xl font-bold font-serif">RAKATA HEAT</h1>
@@ -80,10 +119,19 @@ const Navbar: FC = () => {
               </button>
             </Flex>
             <Reveal delay={0}>
-              <Flex direction="col" directionMd="col" gap="gap-5" align="start" className="w-full">
+              <Flex
+                direction="col"
+                directionMd="col"
+                gap="gap-5"
+                align="start"
+                className="w-full"
+              >
                 {links.map((link, i) => (
                   <Link key={i} href={link.url}>
-                    <button onClick={() => setIsOpen(false)} className="w-full text-2xl font-medium flex justify-between">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="w-full text-2xl font-medium flex justify-between"
+                    >
                       <p>{link.label}</p>
                       <FaChevronRight />
                     </button>
